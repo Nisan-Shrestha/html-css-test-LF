@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Inter";
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Noto Serif", serif;
+}
+
+.outer {
+  /* padding: 2rem; */
+  /* max-width: 1280px; */
+  display: flex;
+}
+
+.left-panel {
+  box-sizing: border-box;
+  position: sticky;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 2.5rem;
+  left: 0;
+  top: 0;
+  /* height: 100vh; */
+  height: 100svh;
+  width: 30svw;
+  background-color: #f0f0f0;
+  /* padding-right: 0; */
+  /* margin-right: 2.5rem; */
+  background-image: url(./public/img/BgPattern.png);
+  background-size: 400%;
+  background-blend-mode: lighten;
+
+  background-position: center;
+  /* overflow: clip; */
+}
+
+.profile-details {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px lightgray solid;
+}
+
+@keyframes scaler {
+  0% {
+    scale: 75%;
+    opacity: 0;
+  }
+  100% {
+    scale: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes hov-scaler {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(9deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(0deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(-9deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.ProfileP {
+  opacity: 0;
+  box-sizing: border-box;
+  border-radius: 50% 5%;
+  border: grey 0.25rem solid;
+  height: 200px;
+  animation: scaler .7s ease-in-out 0s both;
+}
+
+.hoverer:hover {
+  animation: hov-scaler 0.5s ease-in-out 0s both;
+}
+
+@keyframes moveup {
+  0% {
+    transform: translate(0, 32px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes moveright {
+  0% {
+    transform: translate(-32px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+.name,
+.email {
+  margin: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.name {
+  font-size: large;
+  font-weight: 600;
+  animation: moveup .7s  ease-in-out;
+}
+.email {
+  opacity: 0;
+  animation: moveup .7s  ease-in-out 0.2s forwards;
+}
+
+.skills {
+  /* display: flex;
+  flex-direction: column; */
+  /* align-self: start; */
+  padding: 1rem 0;
+}
+
+.skills h2 {
+  opacity: 0;
+  animation: moveup .6 ease-in-out 0.6s forwards;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+.skills li {
+  opacity: 0;
+  animation: moveup .6 ease-in-out 0.8s forwards;
+}
+
+.stars{
+  display: inline-block;
+  opacity: 0;
+  animation: moveright 1s ease-out 1s forwards;
+}
+
+li {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.rating {
+  margin-top: 0.25rem;
+  height: 30px;
+  filter: invert(99%) sepia(91%) saturate(4431%) hue-rotate(336deg)
+    brightness(94%) contrast(103%);
+}
+
+.main-panel {
+  padding: 4rem;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  /* align-items: stretch; */
+}
+
+.main-title {
+  font-size: 2rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  border-bottom: lightgray solid 2px;
+  padding-bottom: 0.25rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  opacity: 0;
+  animation: moveup .6s ease-in-out .6s forwards;
+}
+
+.card-entry {
+  align-self: stretch;
+  display: block;
+  max-width: 70%;
+  border-radius: 1rem;
+  border: lightgray 1px solid;
+  padding: 2rem;
+  margin: 1.5rem 1.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0;
+  animation: moveup .6s ease-in-out .9s forwards;
+}
+.card-title {
+  /* display: inline; */
+  font-size: 1.5rem;
+  margin-top: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: lightgray 1px solid;
+  /* bor */
+}
+
+.card-details {
+  list-style: "\1f9d9";
+  /* list-style: symbols(cyclic "🧙‍♂️a" "🔀" "📱"); */
+}
+
+.card-details li {
+  font-size: 1.25rem;
+  padding-left: 0.75rem;
+}
+
+section {
+  max-width: 90%;
+  margin-bottom: 2rem;
+}
+
+.card-details.edu {
+  list-style: "–";
+}
+
+.field {
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.institution {
+  color: #555;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.year {
+  color: #777;
+  font: 400;
+  font-size: 1rem;
+}
+
+.divider {
+  margin: 1rem 5px;
+  display: inline-block;
+  height: 10px;
+  border-bottom: lightgray 1px solid;
+  animation: scaler 1.5s ease-in-out 0s both;
+}
